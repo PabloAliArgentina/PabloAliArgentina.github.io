@@ -11,7 +11,7 @@ Jamás había usado Jekyll, pero me gustaron algunas particularidades del framew
 
 * La idea de tener un blog al estilo Wordpress pero generando un sitio estático, sencillo, fácil de mantener
 * Que puediera ser desplegado dentro del propio GitHub, ya que en principio el blog será sobre cuestiones de desarrollo informático.
-* Poder redactar post en formato *markdown* 
+* Poder redactar posteos en formato *markdown* 
 
 En el proceso de aprendizaje y búsqueda, tuve que decidir entre tres maneras de hacer el proceso
 
@@ -113,7 +113,7 @@ Aquí no hay mucho secreto, ya que cada línea nos viene con una explicación de
         #twitter_username: jekyllrb
         github_username:  pabloaliargentina
 
-Nótese que miesntras quité los comentarios en las líneas para mayor claridad, por otro lado comenté la línea de twitter_username, ya que no quiero mostrar esa información. Una vez realizados los cambios guardamos el archivo.
+Nótese que mientras quité los comentarios en las líneas para mayor claridad, por otro lado comenté la línea de twitter_username, ya que no quiero mostrar esa información. Una vez realizados los cambios guardamos el archivo.
 
 Ahora vamos a la terminal donde está corriendo nuestro servidor local.
 Detenemos el servidor presionando CRTL+C
@@ -125,14 +125,13 @@ Nos fijamos por las dudas si el servidor no encontró errores, si todo va bien, 
 
 ![image](/static/img/first_blog_01.png)
 
-Ahora vamos a hacer click arriba a la derecha y hacemos click en _about_
+Ahora nos situamos arriba a la derecha y hacemos click en _about_
 
 Nos aparecerá algo como esto:
 
 ![image](/static/img/first_blog_about.png)
 
-Ahora nos dispondremos a generar nuestro propio _about_
-Abrimos el archivo about.markdown en la raiz de nuestro proyecto.
+Ahora nos dispondremos a generar nuestro propio _about_. Abrimos el archivo about.markdown en la raiz de nuestro proyecto.
 
 Nos encontramos en las lineas iniciales una sección encasillada entre tres lineas consecutivas:
 
@@ -151,8 +150,8 @@ por
 
         title: Acerca de mi. 
 
-Mas abajo estará el cuerpo del texto que querramos escribir. podemos ver ya algunas líneas con caracteres especiales de markdown. No entraremos en detalle acerca de Markdown, hay suficiente información en la web para aprender a utilizarlo convenientemente.
-Borramos todo ese texto y lo resscribimos a nuestro antojo. Finalmente guardamos el archivo y vamos al navegador a recargar la página, notando los cambios efectuados.
+Mas abajo estará el cuerpo del texto que querramos escribir. Podemos ver ya algunas líneas con caracteres especiales de markdown. No entraremos en detalle acerca de Markdown, hay suficiente información en la web para aprender a utilizarlo convenientemente.
+Borramos todo ese texto y lo reescribimos a nuestro antojo. Finalmente guardamos el archivo y vamos al navegador a recargar la página, notando los cambios efectuados.
 Nótese que en esta ocasión, no tuvimos necesidad de reiniciar el servidor, ya que automáticamente detectó los cambios y volvió a renderizar el sitio.
 
 ![image](/static/img/first_blog_about_01.png)
@@ -167,8 +166,13 @@ Ya tenemos personalizados los datos del blog, Por supuesto que quedan muchas cos
 Bueno, ahora toca la parte mas divertida, que es empezar a publicar posteos. Ya que esta será la tarea mas frecuente, uno esperaría que también sea la mas sencilla, y por suerte lo es.
 Vayamos ahora a la carpeta _/\_posts/_
 Allí nos encontraremos con un archivo con extensión markdown, que es ni mas ni menos que el archivo que genera el post de ejemplo de nuestro sitio: "Welcome to Jekyll". Si hacemos click en el enlace dentro del blog, nos llevará a mostrarnos el cuerpo de texto asociado a esa entrada.
-De aquí en mas, cada posteo que querramos subir al blog consistirá simplemente en escribir un nuevo archivo .md o .markdown. El nombre de ese archivo debe tener el formato AAAA/MM/DD-título.md.
-En mi caso, el archivo de ejemplo es _2024-01-24-welcome-to-jekyll.markdown_
+De aquí en mas, cada posteo que querramos subir al blog consistirá simplemente en escribir un nuevo archivo .md o .markdown dentro de esta carpeta. El nombre de ese archivo debe tener el formato
+
+AAAA/MM/DD-título.md.
+
+En mi caso, el archivo de ejemplo es:
+
+_2024-01-24-welcome-to-jekyll.markdown_
 
 Al abrirlo nos volvemos a encontrar con el encabezado o _front matter:_
 
@@ -179,8 +183,10 @@ Al abrirlo nos volvemos a encontrar con el encabezado o _front matter:_
         categories: jekyll update
         ---
 
-Nuestros posts deberán replicar al menos las variables layout y title para mostrarse correctamente en el blog. El resto del archivo no es mas que el cuerpo de texto de nuestro posteo.
-Con esto en mente, hagamos nuestro propio posteo, creando un archivo nuevo, por ejemplo 2024-01-24-El-primer-post.md
+Nuestros posts deberán replicar al menos las variables layout y title para mostrarse correctamente en el blog. El resto del archivo es ni mas ni menos que el cuerpo de texto de nuestro posteo.
+Con esto en mente, hagamos nuestro propio posteo, creando un archivo nuevo, por ejemplo:
+
+2024-01-24-El-primer-post.md
 
 
 _NOTA: Se recomienda utilizar algun editor de texto con soporte para archivos markdown, a fin de tener una vista previa en tiempo real de lo que se está escribiendo, en mi caso uso el propio vscode que ya tiene incorporada esa funcionalidad_
