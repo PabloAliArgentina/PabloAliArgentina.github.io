@@ -3,7 +3,7 @@ layout: post
 title:  "Cómo armé esta página con Jekyll + Git + GitHub"
 ---
 
-Este post, de hecho mi primer post en esta página, lo estoy usando a la vez de prueba y de "tutorial" para quienes necesitan desarrollar un sencillo blog personal en GitHub, o incluso para mi mismo si tuviera que repetir el proceso.
+Este post, que es de hecho mi primer post en esta página, lo estoy usando a la vez de prueba como de tutorial para quienes necesiten desarrollar un sencillo blog personal en GitHub, o incluso para mi mismo si tuviera que repetir el proceso.
 
 Para entender este "how to" es necesario ya tener algún conocimiento de Git y de Github. Asumo que en general, por puro contexto, quien esté leyendo este post conocerá en mayor o menor profundidad. Pero de no ser así, hay vasto y muy buen material para aprender a usar esas maravillosas herramientas.
 
@@ -15,13 +15,14 @@ Jamás había usado Jekyll, pero me gustaron algunas particularidades del framew
 
 En el proceso de aprendizaje y búsqueda, tuve que decidir entre tres maneras de hacer el proceso
 
-* Hacer un fork de algún otro proyecto o sitio hecho con jekyll (licencias mediante) y desde allí, modificar el contenido a mi gusto.
+* Hacer un fork de algún otro proyecto o sitio hecho con Jekyll (licencias mediante) y desde allí, modificar el contenido a mi gusto.
 * Desarrollar desde cero un proyecto Jekyll en local y luego subirlo a GitHub.
 * Desarrollar desde un template de Jekyll en local y luego subirlo a GitHub.
 
-Decidí hacer uso de la tercera opción, me interesaba "jugar" con el sitio de manera local, tocar, cambiar, probar cosas de manera muy dinámica, pero tampoco quería embarrarme desde el principio en las cuestiones estéticas o aspectos profundos de diseño web.
 
-Expongo a continuación los pasos que seguí:
+Decidí hacer uso de la tercera opción, me interesaba "jugar" con el sitio de manera local, tocar, cambiar, probar cosas de manera muy dinámica, pero tampoco quería embarrarme desde el principio en las cuestiones estéticas o aspectos profundos de diseño web. Además, de esta manera no estamos limitados a utilizar solamente los _temas_ o los _plugins_ que utiliza por defecto [GitHub Pages](https://docs.github.com/es/pages)
+
+Expongo a continuación los pasos que seguir:
 
 ---
 ---
@@ -54,7 +55,7 @@ Se creará una carpeta *myblog* con todos los archivos necesarios para desplegar
 ---
 
 
-* Entramos a la carpeta *myblog* (la cual consideraremos de aquí en mas nuestra carpeta raiz o root) y ya podemos desplegar el sitio en forma local
+* Entramos a la carpeta *myblog* (la cual consideraremos de aquí en mas nuestra carpeta raíz o root) y ya podemos desplegar el sitio en forma local
 
         cd myblog
         bundle exec jekyll serve
@@ -72,13 +73,13 @@ Excelente, ya tenemos nuestro blog vivito y coleando. Ahora podemos empezar a pe
 
 ## Iniciar el control de versiones con Git
 
-Ahora que tenemos el blog funcionando, es un buen momento para instalar el control de versiones.Situados en la carpeta raiz del proyecto ejecutamos:
+Ahora que tenemos el blog funcionando, es un buen momento para instalar el control de versiones.Situados en la carpeta raíz del proyecto ejecutamos:
 
         git init
         git add .
         git commit -m "Commit Inicial"
 
-De aquí en mas el control de flujo de las versiones queda a criterio y entendimiento de cada uno. Cabe aclarar que nuestra carpeta de proyecto ya tiene configuradas sus correspondientes archivos .gitignore para excluir archivos que no queremos incluir en el seguimiento.
+De aquí en mas el control de flujo de las versiones queda a criterio y entendimiento de cada uno. Cabe aclarar que nuestra carpeta de proyecto ya tiene configuradas sus correspondientes archivos .gitignore para excluir archivos que no queremos incluir en el seguimiento. 
 
 
 ---
@@ -88,7 +89,7 @@ De aquí en mas el control de flujo de las versiones queda a criterio y entendim
 
 Como comenté anteriormente, una de los puntos altos de Jekyll es la posibilidad de utilizar  markdown para formatear nuestros posteos o cualquier información visible del sitio. Por supuesto que también puede usarse html y hasta combinar ambos, tal cual sucede con los típicos archivos READ\.ME que solemos escribir en nuestros repos.
 
-Comenzaremos con las cuestiones mas generales y mas estáticas de nuestro sitio, para ello nos dirigimos al archivo __config.yml_ ubicado en el directorio raiz de nuestro proyecto. Las primeras líneas, comentadas con #, nos indican justamente el caracter estático del archivo, donde se configurarán los aspectos globales del sitio, que se supone no deberemos modificar con frecuencia. Nos advierte también que tendremos que reiniciar nuestro servidor para que los cambios se vean reflejados en el sitio, cosa que no sucederá luego con el contenido variable de la página, como por ejemplo, los posteos. 
+Comenzaremos con las cuestiones mas generales y mas estáticas de nuestro sitio, para ello nos dirigimos al archivo __config.yml_ ubicado en el directorio raíz de nuestro proyecto. Las primeras líneas, comentadas con #, nos indican justamente el carácter estático del archivo, donde se configurarán los aspectos globales del sitio, que se supone no deberemos modificar con frecuencia. Nos advierte también que tendremos que reiniciar nuestro servidor para que los cambios se vean reflejados en el sitio, cosa que no sucederá luego con el contenido variable de la página, como por ejemplo, los posteos. 
 Unas líneas mas abajo ya aparecen parámetros que podemos empezar a personalizar:
 
         title: Your awesome title
@@ -131,7 +132,7 @@ Nos aparecerá algo como esto:
 
 ![image](/static/img/first_blog_about.png)
 
-Ahora nos dispondremos a generar nuestro propio _about_. Abrimos el archivo about.markdown en la raiz de nuestro proyecto.
+Ahora nos dispondremos a generar nuestro propio _about_. Abrimos el archivo about.markdown en la raíz de nuestro proyecto.
 
 Nos encontramos en las lineas iniciales una sección encasillada entre tres lineas consecutivas:
 
@@ -161,11 +162,11 @@ Ya tenemos personalizados los datos del blog, Por supuesto que quedan muchas cos
 ---
 ---
 ---
-## Escibir el primer posteo
+## Escribir el primer posteo
 
 Bueno, ahora toca la parte mas divertida, que es empezar a publicar posteos. Ya que esta será la tarea mas frecuente, uno esperaría que también sea la mas sencilla, y por suerte lo es.
 Vayamos ahora a la carpeta _/\_posts/_
-Allí nos encontraremos con un archivo con extensión markdown, que es ni mas ni menos que el archivo que genera el post de ejemplo de nuestro sitio: "Welcome to Jekyll". Si hacemos click en el enlace dentro del blog, nos llevará a mostrarnos el cuerpo de texto asociado a esa entrada.
+Allí nos encontraremos con un archivo con extensión markdown, que es ni mas ni menos que el archivo que genera el post de ejemplo de nuestro sitio: "Welcome to Jekyll". Si hacemos click en el enlace dentro del blog, nos llevará a mostrarnos el posteo asociado a esa entrada.
 De aquí en mas, cada posteo que querramos subir al blog consistirá simplemente en escribir un nuevo archivo .md o .markdown dentro de esta carpeta. El nombre de ese archivo debe tener el formato
 
 AAAA/MM/DD-título.md.
@@ -189,7 +190,7 @@ Con esto en mente, hagamos nuestro propio posteo, creando un archivo nuevo, por 
 2024-01-24-El-primer-post.md
 
 
-_NOTA: Se recomienda utilizar algun editor de texto con soporte para archivos markdown, a fin de tener una vista previa en tiempo real de lo que se está escribiendo, en mi caso uso el propio vscode que ya tiene incorporada esa funcionalidad_
+_NOTA: Se recomienda utilizar algún editor de texto con soporte para archivos markdown, a fin de tener una vista previa en tiempo real de lo que se está escribiendo, en mi caso uso el propio vscode que ya tiene incorporada esa funcionalidad_
 
 Dentro de nuestro archivo escribimos lo siguiente:
 
@@ -204,7 +205,7 @@ Dentro de nuestro archivo escribimos lo siguiente:
 
 Guardamos los cambios.
 
-Aprovechamos y renombramos el archivo de ejemplo agregándole un caracter "_" al principio, nos quedaría: _2024-01-24-welcome-to-jekyll.markdown
+Aprovechamos y renombramos el archivo de ejemplo agregándole un carácter "_" al principio, nos quedaría: _2024-01-24-welcome-to-jekyll.markdown
 
 Y ahora recargamos nuestra página
 
@@ -216,3 +217,36 @@ Ahora  click en el enlace a nuestro post y...
 ![image](/static/img/first_blog_post.png)
 
 Voilá! Nuestro primer post está publicado.
+
+Sin embargo, hay algo ahí que me molesta un poco, la verdad que por el momento no quiero ver esa leyenda de "suscribe via RSS" al final del listado de entradas. No fue fácil dar con la solución a esta cuestión, pero de esa búsqueda, como suele suceder, aprendí mas a fondo cómo funcionan los _temas_ de Jekyll, y como se pueden personalizar hasta el último detalle. Dentro de nuestras carpeta de usuario, nuestro /home, hemos instalado una carpeta _/gem_ que contiene mucha información que nuestro framework usa para construir el blog. En mi caso particular (porque eso puede depender de la versión que se tenga instalada y del sistema operativo) me voy a referir a la carpeta _'usuario'/gems/gems/minima-2-5-1/\_layouts/_. Allí se encuentran algunos archivos _html_ que constituyen las plantillas básicas sobre las que se formará el sitio web. Podríamos simplemente editar el archivo necesario para quitar nuestra molesta línea de suscripción, pero ese cambio sólo aplicaría a nuestro sitio local, sin efecto alguno cuando subamos la página a GitHub. La solución consistirá entonces en copiar primero esta carpeta en nuestro proyecto, y ahí si, entonces, modificar lo necesario. Nos posicionamos en la carpeta raíz del proyecto y desde allí hacemos:
+
+        cp ~/gems/gems/minima-2.5.1/_layouts/ .
+
+Se creará la carpeta _/\_layouts_ en nuestro proyecto con los algunos archivos .html.
+Nos dirigimos al archivo _home.html_ y encontraremos una línea de código similar a ésta:
+
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+simplemente la borramos o la comentamos por si decidimos utilizarla mas adelante.
+Salvamos los cambios y ya que estamos, agregamos este mismo posteo a la lista, para verla un poco mas rellenita.
+Nos queda así:
+
+![image](/static/img/first_blog_02.png)
+
+¡Bien hecho! Estamos en condiciones de dar otro paso importante.
+
+---
+---
+---
+
+## Crear un repositorio en GitHub y subir nuestro blog.
+
+Con lo hecho hasta acá, estaríamos en condiciones entonces de subir nuestra primera versión potable del nuestro sitio. Empecemos por actualizar nuestro repo con git en local:
+
+        git add .
+        git commit -m "Listo para subir"
+
+---
+
+Ahora nos toca crear el repositorio en github.
