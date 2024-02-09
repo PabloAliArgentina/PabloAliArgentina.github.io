@@ -118,7 +118,7 @@ Como vemos, hemos reducido el tiempo de ejecución mas de 20 veces comparado con
 
 ---
 
-###Numba
+### Numba
 
 [Numba](https://numba.pydata.org) es una biblioteca de compilación en tiempo real que nos permite compilar parte de nuestro código python a código de máquina sin pasar por el bytecode (código intermedio) que genera python al compilar. De esta manera, el procesador no perderá tiempo y recursos en interpretar ese código intermedio en cada iteración, utilizándolos solamente para resolver los cálculos de nuestro algoritmo, resultando todo esto en una performance sumamente satisfactoria. La "contra" de usar *Numba* es que nos limita el abanico de tipos de datos y tipos de operaciones de Python que podemos utilizar dentro de una función que opere bajo esta modalidad, pero generalmente uno halla la forma de traducir esos datos antes y bien que suele valer la pena hacerlo. Una de las formas mas frecuentes de usar *numba* es a través de los decoradores _jit_ (just in time) colocados justo antes de la declaración de una función, y que le indica al intérprete python que esa función será compilada en tiempo real por *numba*. En nuestro caso de uso, quedaría así:
 
@@ -134,7 +134,7 @@ Acá podemos notar dos cosas interesantes. Por un lado vemos que le pasamos a la
 Por otra parte, vemos que el tiempo de ejecución es bastante superior a lo que obtuvimos con *numpy_method* siendo que dije que el orden iba a ser de mayor a menor tiempo de ejecución. La razón de esto es que, cuando usamos @njit y ejecutamos la función por primera vez, *numba* tiene que compilar el código de la función, y eso toma tiempo de procesador. Sin embargo, si llamamos a la función nuevamente, al estar ya compilada, solo tomará el tiempo de ejecución y allí tendremos una real magnitud. Así que si volvemos a llamar a njit_for_cicle() nos demandará....
 
 
-**0.092 segundos. TENEMOS UN GANADOR SEÑORES!!!** 
+### **0.092 segundos. TENEMOS UN GANADOR SEÑORES!!!** 
 
 ![image](/static/img/simpsons/primerpremio.jpg)
 
@@ -142,7 +142,7 @@ Por otra parte, vemos que el tiempo de ejecución es bastante superior a lo que 
 
 ## Resumen:
 
-Como pudimos apreciar, trabajar en un lenguaje de alto nivel como python, no tiene por que significar una merma en la performance de nuestro código, al contrario, al utilizar bibliotecas como las antes descritas no sucumbimos a la tentación de "meter mano" en código de bajo nivel mientras el problema que queremos resolver es otro, nos podemos enfocar de lleno en el análisis y proceso de los datos sin perder legibilidad y simpleza. Con este artículo espero estar comenzando una serie acerca del procesamiento eficiente de datos númericos y data science. Espero que te haya resultado útil y/o interesante y por supuesto espero tu feedback ya sea con un mail en la dirección que figura debajo o dándole una estrella al [REPO](https://github.com/PabloAliArgentina/DScy) donde podrán [descargar el código completo](https://github.com/PabloAliArgentina/DScy/blob/main/iter_performance.py) relativo a este artículo. 
+Como pudimos apreciar, trabajar en un lenguaje de alto nivel como python no tiene por que significar una merma en la performance de nuestro código, al contrario, al utilizar bibliotecas como las antes descritas no sucumbimos a la tentación de "meter mano" en código de bajo nivel mientras el problema que queremos resolver es otro, nos podemos enfocar de lleno en el análisis y proceso de los datos sin perder legibilidad y simpleza. Con este artículo espero estar comenzando una serie acerca del procesamiento eficiente de datos numéricos y data science. Espero que te haya resultado útil y/o interesante y por supuesto espero tu feedback ya sea con un mail en la dirección que figura debajo o dándole una estrella al [REPO](https://github.com/PabloAliArgentina/DScy) donde podrán [descargar el código completo](https://github.com/PabloAliArgentina/DScy/blob/main/iter_performance.py) relativo a este artículo. 
 
 Pablo.
 
